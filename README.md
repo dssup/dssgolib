@@ -1,6 +1,6 @@
 # dssgolib
 
-This is a collection of various Go packages.
+A collection of Go packages for various utility functions. Zero-dependency, standard library only.
 
 ## Packages
 
