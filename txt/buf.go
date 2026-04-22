@@ -3,12 +3,17 @@ package txt
 import (
 	"strconv"
 	"unicode/utf8"
+	"unsafe"
 )
 
 type Buf []byte
 
 func NewBuf(initCap int) Buf {
 	return make([]byte, 0, initCap)
+}
+
+func (b *Buf) String() string {
+	return unsafe.String(unsafe.SliceData(*b), len(*b))
 }
 
 func (b *Buf) Clear() {
